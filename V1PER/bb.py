@@ -7,7 +7,7 @@ import time
 
 user_search = input('Which item to search on Best Buy?')
 
-PATH = r"C:\Users\ivanilla\Desktop\V1PER\chromedriver.exe"
+PATH = r"C:\Users\ivanilla\Desktop\oink\V1PER\chromedriver.exe"
 
 driver = webdriver.Chrome(PATH)
 

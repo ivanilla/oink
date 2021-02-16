@@ -3,7 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-browser = webdriver.Chrome(r"C:\Users\ivanilla\Desktop\V1PER\chromedriver.exe")
+browser = webdriver.Chrome(r"C:\Users\ivanilla\Desktop\oink\V1PER\chromedriver.exe")
 browser.get("https://www.supremenewyork.com/previews/springsummer2021/all/pants")
 
 try:
@@ -16,7 +16,7 @@ try:
 		prodlink = subproduct.get_attribute("href")
 		output = (f'{subproduct.text} @ {prodlink}\n')
 
-		with open(r"C:\Users\ivanilla\Desktop\V1PER\links.txt", "a") as f:
+		with open(r"C:\Users\ivanilla\Desktop\oink\V1PER\links.txt", "a") as f:
 			f.write(output)
 			
 
