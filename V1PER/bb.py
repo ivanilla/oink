@@ -24,12 +24,7 @@ searchbar.send_keys(user_search)
 #click search button
 driver.find_element_by_xpath("//*[@class='header-search-button']").click();
 
-
-
-#print(driver.page_source)
-
 #wait for presence of this element before moving on!
-
 try:
 	skulist = WebDriverWait(driver, 10).until(
 		EC.presence_of_element_located((By.CLASS_NAME, "sku-item-list"))
@@ -39,7 +34,6 @@ try:
 		header = skuitem.find_element_by_class_name("sku-header")
 		stock = skuitem.find_element_by_class_name("sku-list-item-button")
 		print(f'{stock.text} - {header.text}')
-
 
 finally:
 	driver.quit()
